@@ -1,5 +1,14 @@
 name: Build Modules
-on: [workflow_call, workflow_dispatch]
+on: 
+  workflow_call:
+    secrets:
+      TELEGRAM_TOKEN:
+        description: 'Telegram Bot Token'
+        required: true
+      TELEGRAM_TO:
+        description: 'Telegram Chat ID'
+        required: true
+  workflow_dispatch:
 
 jobs:
   run:
@@ -102,3 +111,11 @@ jobs:
           skip_checkout: true
           file_pattern: build.md *.json
           commit_message: Bump version ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
+
+  notify:
+    needs: run
+    uses: ./.github/workflows/notify.yml
+    if: github.ref == 'refs/heads/main'
+    secrets:
+      TELEGRAM_TO: ${{ secrets.TELEGRAM_TO }}
+      TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
