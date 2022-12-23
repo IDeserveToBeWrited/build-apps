@@ -110,10 +110,4 @@ jobs:
           file_pattern: build.md *-update.json
           commit_message: Bump version ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
 
-  notify:
-    needs: run
-    uses: ./.github/workflows/notify.yml
-    if: github.ref == 'refs/heads/main'
-    secrets:
-      TELEGRAM_TO: ${{ secrets.TELEGRAM_TO }}
-      TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+
