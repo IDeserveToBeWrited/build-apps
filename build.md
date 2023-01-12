@@ -1,19 +1,22 @@
-CLI: revanced-cli-2.18.2-all.jar  
-Integrations: app-release-unsigned-v0.86.0.apk  
-Patches: revanced-patches-2.147.0.jar  
+CLI: revanced-cli-2.19.0-all.jar  
+Integrations: revanced-integrations-0.92.2-v0.92.2.apk  
+Patches: revanced-patches-2.153.0.jar  
 
-### [2.147.0](https://github.com/revanced/revanced-patches/compare/v2.146.0...v2.147.0) (2022-12-21)
+### [2.153.0](https://github.com/revanced/revanced-patches/compare/v2.152.0...v2.153.0) (2023-01-07)
+### Bug Fixes
+* **youtube/general-ads:** move settings to correct preference screens ([cde45fc](https://github.com/revanced/revanced-patches/commit/cde45fca769eddea64072f13f836d46560a4a89a))
 ### Features
-* **youtube/return-youtube-dislike:** debug connection statistics, toast on error, high priority background threads ([#1320](https://github.com/revanced/revanced-patches/issues/1320)) ([30273a9](https://github.com/revanced/revanced-patches/commit/30273a9bbdd40453baeb09f26ac9d218569a3e71))
+* **youtube/remember-video-quality:** simplify settings switch state description ([9bd42ec](https://github.com/revanced/revanced-patches/commit/9bd42ec1a1b54b103cd2550211515acdaf90e9de))
+* **youtube:** `remember-playback-rate` patch ([177e908](https://github.com/revanced/revanced-patches/commit/177e908dba260f184a2835b73b834563ca9c29fd))
 
   
 **App Versions:**  
 YouTube: 17.49.37  
-Music (arm64-v8a): 5.36.51  
-Music (arm-v7a): 5.36.51  
-Twitter: 9.69.1-release.0  
+Music (arm64-v8a): 5.39.52  
+Music (arm-v7a): 5.39.52  
+Twitter: 9.71.0-release.0  
 Reddit: 2022.45.0  
-Twitch: 14.3.2  
+Twitch: 14.3.3  
 TikTok: 27.2.5  
 
 Install [Vanced Microg](https://github.com/TeamVanced/VancedMicroG/releases) to be able to use non-root YouTube or Music  
