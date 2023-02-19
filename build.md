@@ -1,24 +1,22 @@
 CLI: revanced-cli-2.20.0-all.jar  
-Integrations: revanced-integrations-0.93.1-v0.93.1.apk  
-Patches: revanced-patches-2.156.0.jar  
+Integrations: revanced-integrations-0.97.0-v0.97.0.apk  
+Patches: revanced-patches-2.162.0.jar  
 
-### [2.156.0](https://github.com/revanced/revanced-patches/compare/v2.155.0...v2.156.0) (2023-01-17)
+### [2.162.0](https://github.com/revanced/revanced-patches/compare/v2.161.1...v2.162.0) (2023-02-14)
 ### Bug Fixes
-* **reddit/general-reddit-ads:** specify last version that works correctly ([#1495](https://github.com/revanced/revanced-patches/issues/1495)) ([2a3bedd](https://github.com/revanced/revanced-patches/commit/2a3bedd5608d2f23b174c4227ac167e44e54215e))
+* **youtube/general-ads:** use better description for switch ([d33f959](https://github.com/revanced/revanced-patches/commit/d33f9597529d63014dd42fc6fe1e84b76831e0f3))
 ### Features
-* explain how to capture crash logs [skip ci] ([f938ba8](https://github.com/revanced/revanced-patches/commit/f938ba81ec98f06f508dbdceeabd29a0ea7bf1af))
-* **id-austria:** `remove-root-detection` patch ([3cf77cd](https://github.com/revanced/revanced-patches/commit/3cf77cdb4ebbd128d29eedefa1ee35289e3c8058))
-* **id-austria:** `spoof-signature` patch ([355a847](https://github.com/revanced/revanced-patches/commit/355a847b1ccd69c4ab2c356395c97b4871e53f1f))
-* **nova-launcher:** `unlock-prime` patch ([#1463](https://github.com/revanced/revanced-patches/issues/1463)) ([cf710b2](https://github.com/revanced/revanced-patches/commit/cf710b27740cce4b9a0fbdf03a494eb8c65246da))
+* **youtube/general-ads:** hide web search results ([9975981](https://github.com/revanced/revanced-patches/commit/997598109409ec6a096c652dd8b4b4d27daeb8ec))
+* **yuka:** `unlock-premium` patch ([#1608](https://github.com/revanced/revanced-patches/issues/1608)) ([71e1594](https://github.com/revanced/revanced-patches/commit/71e15945c1b4019eaa2ff214b4efbfc6b1a67376))
 
   
 **App Versions:**  
 YouTube: 17.49.37  
-Music (arm64-v8a): 5.41.50  
-Music (arm-v7a): 5.41.50  
-Twitter: 9.73.0-release.0  
+Music (arm64-v8a): 5.44.53  
+Music (arm-v7a): 5.44.53  
+Twitter: 9.76.0-release.0  
 Reddit: 2022.45.0  
-Twitch: 14.4.0  
+Twitch: 14.5.2  
 TikTok: 27.2.5  
 
 Install [Vanced Microg](https://github.com/TeamVanced/VancedMicroG/releases) to be able to use non-root YouTube or Music  
