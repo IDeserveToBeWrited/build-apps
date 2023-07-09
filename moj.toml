@@ -1,0 +1,6 @@
+[YouTube]
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
+build-mode = "both"
+version = "auto"
+excluded-patches = "always-autorepeat comments disable-fullscreen-panels disable-zoom-haptics enable-debugging hide-album-cards hide-autoplay-button hide-captions-button hide-cast-button hide-crowdfunding-box hide-email-address hide-endscreen-cards hide-info-cards hide-player-buttons hide-video-action-buttons hide-watch-in-vr premium-heading return-youtube-dislike theme vanced-microg-support"
+

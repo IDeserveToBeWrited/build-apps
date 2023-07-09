@@ -5,6 +5,7 @@ MODULE_SCRIPTS_DIR="scripts"
 TEMP_DIR="temp"
 BUILD_DIR="build"
 PKGS_LIST="${TEMP_DIR}/module-pkgs"
+DELIM="$(openssl rand -hex 8)"
 
 if [ "${GITHUB_TOKEN:-}" ]; then GH_HEADER="Authorization: token ${GITHUB_TOKEN}"; else GH_HEADER=; fi
 NEXT_VER_CODE=${NEXT_VER_CODE:-$(date +'%Y%m%d')}
@@ -433,7 +434,7 @@ build_rv() {
 			fi
 		fi
 		if [ "$build_mode" = apk ]; then
-			local apk_output="${BUILD_DIR}/${app_name_l}-${RV_BRAND_F}-v${version_f}-${arch}.apk"
+			local apk_output="${BUILD_DIR}/${app_name_l}-${RV_BRAND_F}-v${version_f}-${arch}-${DELIM}.apk"
 			cp -f "$patched_apk" "$apk_output"
 			pr "Built ${app_name} (${arch}) (non-root): '${apk_output}'"
 			continue
@@ -469,7 +470,7 @@ build_rv() {
 			"https://raw.githubusercontent.com/${GITHUB_REPOSITORY:-}/update/${upj}" \
 			"$base_template"
 
-		local module_output="${app_name_l}-${RV_BRAND_F}-magisk-v${version}-${arch}.zip"
+		local module_output="${app_name_l}-${RV_BRAND_F}-magisk-v${version}-${arch}-${DELIM}.zip"
 		if [ ! -f "$module_output" ] || [ "$REBUILD" = true ]; then
 			pr "Packing module ($app_name)"
 			cp -f "$patched_apk" "${base_template}/base.apk"
