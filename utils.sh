@@ -10,8 +10,6 @@ NEXT_VER_CODE=${NEXT_VER_CODE:-$(date +'%Y%m%d')}
 REBUILD=${REBUILD:-false}
 OS=$(uname -o)
 
-DELIM="$(openssl rand -hex 8)"
-
 SERVICE_SH=$(cat scripts/service.sh)
 CUSTOMIZE_SH=$(cat scripts/customize.sh)
 UNINSTALL_SH=$(cat scripts/uninstall.sh)
@@ -434,7 +432,7 @@ build_rv() {
 			fi
 		fi
 		if [ "$build_mode" = apk ]; then
-			local apk_output="${BUILD_DIR}/${app_name_l}-${rv_brand_f}-v${version_f}-${arch_f}-${DELIM}.apk"
+			local apk_output="${BUILD_DIR}/${app_name_l}-${rv_brand_f}-v${version_f}-${arch_f}.apk"
 			cp -f "$patched_apk" "$apk_output"
 			pr "Built ${table} (non-root): '${apk_output}'"
 			continue
