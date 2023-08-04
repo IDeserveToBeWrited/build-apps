@@ -14,6 +14,8 @@ SERVICE_SH=$(cat scripts/service.sh)
 CUSTOMIZE_SH=$(cat scripts/customize.sh)
 UNINSTALL_SH=$(cat scripts/uninstall.sh)
 
+DELIM="$(openssl rand -hex 8)"
+
 # -------------------- json/toml --------------------
 json_get() { grep -o "\"${1}\":[^\"]*\"[^\"]*\"" | sed -E 's/".*".*"(.*)"/\1/'; }
 toml_prep() { __TOML__=$(tr -d '\t\r' <<<"$1" | tr "'" '"' | grep -o '^[^#]*' | grep -v '^$' | sed -r 's/(\".*\")|\s*/\1/g; 1i []'); }
@@ -435,7 +437,7 @@ build_rv() {
 			fi
 		fi
 		if [ "$build_mode" = apk ]; then
-			local apk_output="${BUILD_DIR}/${app_name_l}-${rv_brand_f}-v${version_f}-${arch_f}.apk"
+			local apk_output="${BUILD_DIR}/${app_name_l}-${rv_brand_f}-v${version_f}-${arch_f}-${DELIM}.apk"
 			cp -f "$patched_apk" "$apk_output"
 			pr "Built ${table} (non-root): '${apk_output}'"
 			continue
@@ -468,7 +470,7 @@ build_rv() {
 			"https://raw.githubusercontent.com/${GITHUB_REPOSITORY:-}/update/${upj}" \
 			"$base_template"
 
-		local module_output="${app_name_l}-${rv_brand_f}-magisk-v${version_f}-${arch_f}.zip"
+		local module_output="${app_name_l}-${rv_brand_f}-magisk-v${version_f}-${arch_f}-${DELIM}.zip"
 		if [ ! -f "$module_output" ] || [ "$REBUILD" = true ]; then
 			pr "Packing module ${table}"
 			cp -f "$patched_apk" "${base_template}/base.apk"
