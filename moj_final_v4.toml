@@ -1,0 +1,6 @@
+logging-to-file = true        # enables logging of every patch process to a seperate file
+enable-magisk-update = true   # set this to false if you do not want to receive updates for the module in magisk app
+build-mindetach-module = true
+[YouTube]
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
+excluded-patches = "'Theme' 'Hide autoplay button' 'Premium heading' 'Return YouTube Dislike' 'Hide crowdfunding box' 'Hide layout components' 'Hide filter bar' 'Hide 'Load more' button' 'Hide seekbar' 'Hide timestamp' 'Enable debugging' 'Always autorepeat' 'GmsCore support'"
